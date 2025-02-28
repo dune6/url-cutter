@@ -7,9 +7,10 @@ import (
 )
 
 type Config struct {
-	Env         string `yaml:"env" env-default:"local"`
-	StoragePath string `yaml:"storage_path" env-required:"true"`
-	HTTPServer  `yaml:"http_server"`
+	Env                string `yaml:"env" env-default:"local"`
+	StoragePath        string `yaml:"storage_path" env-required:"true"`
+	RandomStringLength int    `yaml:"random_string_length" env-default:"6"`
+	HTTPServer         `yaml:"http_server"`
 }
 
 type HTTPServer struct {
